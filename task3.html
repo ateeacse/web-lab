@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tech Fest 2026 Registration</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Tech Fest 2026 - Registration</h1>
+    <p>Dept. of Computer Science and Engineering, BAUET</p>
+  </header>
+
+  <hr>
+  <main>
+    <form action="#" method="POST">
+
+      <fieldset>
+        <legend>Personal Information</legend>
+
+        <p>
+          <label for="fullname">Full Name:</label><br>
+          <input type="text" id="fullname" name="fullname" placeholder="Your full name" required>
+        </p>
+
+        <p>
+          <label for="email">Email:</label><br>
+          <input type="email" id="email" name="email" placeholder="id@bauet.ac.bd" required>
+        </p>
+
+        <p>
+          <label for="phone">Phone Number (11 digits):</label><br>
+          <input type="tel" id="phone" name="phone" pattern="[0-9]{11}" placeholder="01700000000" required>
+        </p>
+
+        <p>
+          <label for="studentid">Student ID (9 digits):</label><br>
+          <input type="text" id="studentid" name="studentid" pattern="[0-9]{9}" placeholder="202303001" required>
+        </p>
+      </fieldset><br>
+      <fieldset>
+        <legend>Event Registration</legend>
+
+        <p><strong>Category:</strong></p>
+        <p>
+          <input type="radio" id="ug" name="category" value="undergrad" required>
+          <label for="ug">Undergraduate</label>
+        </p>
+        <p>
+          <input type="radio" id="pg" name="category" value="postgrad">
+          <label for="pg">Postgraduate</label>
+        </p>
+        <p>
+          <input type="radio" id="fac" name="category" value="faculty">
+          <label for="fac">Faculty / Industry</label>
+        </p>
+
+        <p><strong>Events:</strong></p>
+        <p>
+          <input type="checkbox" id="ev1" name="events[]" value="hackathon">
+          <label for="ev1">Hackathon</label>
+        </p>
+        <p>
+          <input type="checkbox" id="ev2" name="events[]" value="poster">
+          <label for="ev2">Poster Presentation</label>
+        </p>
+        <p>
+          <input type="checkbox" id="ev3" name="events[]" value="gaming">
+          <label for="ev3">Gaming Contest</label>
+        </p>
+        <p>
+          <input type="checkbox" id="ev4" name="events[]" value="robo">
+          <label for="ev4">Robo Race</label>
+        </p>
+
+        <p>
+          <label for="tshirt">T-Shirt Size:</label><br>
+          <select id="tshirt" name="tshirt_size" required>
+            <option value="">-- Select --</option>
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+            <option value="XL">XL</option>
+            <option value="XXL">XXL</option>
+          </select>
+        </p>
+      </fieldset><br>
+      <fieldset>
+        <legend>Additional Details</legend>
+
+        <p>
+          <label for="receipt">Payment Receipt (PDF or PNG):</label><br>
+          <input type="file" id="receipt" name="receipt" accept=".pdf,.png">
+        </p>
+
+        <p>
+          <label for="notes">Special Notes:</label><br>
+          <textarea id="notes" name="special" rows="4" cols="40" placeholder="Leave blank if none"></textarea>
+        </p>
+      </fieldset><br>
+      <button type="submit">Submit Registration</button>
+      <button type="reset">Clear Form</button>
+
+    </form>
+  </main>
+  <hr>
+  <footer>
+    <p>Deadline: 5 August 2026 - BAUET Tech Fest Committee</p>
+  </footer>
+</body></html>
