@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pokédex Card Lookup</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Bebas+Neue&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="app">
+
+    <!-- ===== Left: search console ===== -->
+    <aside class="console">
+      <header class="console__header">
+        <p class="console__eyebrow">Pokédex Terminal</p>
+        <h1 class="console__title">Card Lookup</h1>
+        <p class="console__sub">Type a Pokémon's name to pull its data card from the PokeAPI.</p>
+      </header>
+
+      <form id="search-form" class="search-form" autocomplete="off">
+        <label for="search-input" class="search-form__label">Pokémon name</label>
+        <div class="search-form__row">
+          <input
+            id="search-input"
+            name="pokemon"
+            type="text"
+            placeholder="e.g. aipom, gengar, snorlax..."
+            spellcheck="false"
+          />
+          <button type="submit" class="btn btn--primary" id="search-btn">
+            <span class="btn__label">Search</span>
+          </button>
+        </div>
+      </form>
+
+      <div class="quick-search">
+        <p class="quick-search__label">Quick search</p>
+        <div class="quick-search__buttons" id="quick-search-buttons">
+          <button class="chip" data-name="pikachu">Pikachu</button>
+          <button class="chip" data-name="charizard">Charizard</button>
+          <button class="chip" data-name="bulbasaur">Bulbasaur</button>
+          <button class="chip" data-name="gengar">Gengar</button>
+        </div>
+      </div>
+
+      <div id="status-panel" class="status-panel" role="status" aria-live="polite"></div>
+    </aside>
+
+    <!-- ===== Right: the card stage ===== -->
+    <main class="stage">
+      <div id="card-slot" class="card-slot">
+        <!-- Card, skeleton, or empty state is injected here by script.js -->
+        <div class="empty-state" id="empty-state">
+          <div class="empty-state__glyph">?</div>
+          <p class="empty-state__text">No card pulled yet. Search a Pokémon to begin.</p>
+        </div>
+      </div>
+    </main>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
